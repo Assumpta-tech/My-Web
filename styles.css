@@ -1,34 +1,83 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'poppins',sans-serif;
-    
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  }
+  .banner{
+  width:100%;
+  height:120vh;
+  background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(mo.jpg);
+  background-size:cover;
+  background-position:center;
 }
-.body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
 #content{
+font-size: 150%;
     margin: 5px;
-    color:black;
+    color:#fff;
     top: 0;
     left: 0;
     width:100%;
-    padding:  100px;
-    background-color: darkcyan;
+    padding:500px;
     text-align: center;
 
 }
 .PUBLICIZE{
+    text-align: center;
     font-size: 2em;
-    color:black;
+    color:#fff;
     user-select: none;
     text-align: left;
 }
+.dropdown{
+    display: inline-block;
+    position: relative;
+
+}
+.a{
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+align-items:center;
+justify-content:space-between;
+
+}
+.navbar a{
+    border: 10px;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.navbar a:hover{
+    background-color:#000;
+}
+.dropdown-options {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color:#000;
+    border-radius:5px;
+    box-shadow:none;
+    background: transparent;
+  }
+  .dropdown:hover .dropdown-options {
+    display: block;
+  }
+  .dropdown-options a {
+    display: block;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    padding:20px 40px;
+  }
+  .dropdown-options a:hover {
+    color: white;
+    background-color:#000 ;
+    border-radius:5px;
+  }
+
 .button{
     padding: 50px;
     margin: 20px;
@@ -37,185 +86,17 @@
 .navigation a{
     position: relative;
     font-size: 1.1em;
-    color:black;
+    color:#fff;
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
 }
-.navigation.btnlogin-popup{
-    width: 130px;
-    height: 50px;
-    background: transparent;
-    border:2px solid #fff;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 500;
-    margin-left: 40px ;
-    transition: 5s;
-    
-}
-.navigation.btnlogin-popup:hover{
-    background: #fff;
-    color: #162938;
-}
-.navigation a::after{
-    content:'';
-    position: absolute;
-    left: 20;
-    bottom: -6px;
-    width: 100%;
-    height:3px;
-    background: #fff;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transition: transform.5s;
-
-}
-.navigation a:hover::after{
-    transform-origin: left;
-    transform: scaleX(1);
-}
-.wrapper{
-    position: relative;
-    width: 400px;
-    height: 440px;
-    background: transparent;
-    border: 2px solid rgba(255,255,255,.5);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0,0,0,.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: height.2s ease;
-}
-.wrapper.form-box{
-    width: 100%;
-    padding:40px;
-
-}
-
-.wrapper.form-box .register{
-    position: absolute;
-    transform: translateX(400px);
-}
-.wrapper.icon-close{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background: #162938;
-    font-size: 2em;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.form-box h2{
-    font-size: 2em;
-    color: #162938;
-    text-align: center;
-}
-.input-box{
-    position: relative;
-    width: 100%;
-    height:50px;
-    border-bottom: 2px solid #162938;
-    margin:30px 0;
-}
-.input-box label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color:#162938;
-    font-weight: 500;
-    pointer-events: none;
-    transition:.5s;
-}
-.input-box input:focus~label, .input-box input:valid~label{
-    top:-5px;
-}
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    color: #162938;
-    font-weight: 600;
-    padding: 0 35px 0 5px;
-}
-.input-box.icon{
-    position: absolute;
-    right:8px;
-    font-size: 1.2em;
-    color: #162938;
-    line-height: 57px;
-}
-.remember-forgot{
-    font-size: .9em;
-    color: #162938;
-    font-weight: 500;
-    margin: -15px 0 15px;
-    display: flex;
-    justify-content: space-between;
-}
-.remember-forgot label input{
-    accent-color: #162938;
-    margin-right: 3px;
-}
-.remember-forgot a{
-    color: #162938;
-    text-decoration: none;
-}
-.remember-forgot a:hover{
-    text-decoration: underline;
-}
-.btn{
-    width:100%;
-    height: 45px;
-    background:#162938;
-    border: none;
-    outline:none;
-    border-radius: 6px;
-    cursor:pointer;
-    font-size: 1em;
-    color: #fff;
-    font-weight: 500;
-    
-}
-.login-register{
-    font-size: .9em;
-    color: #162938;
-    text-align: center;
-    font-weight: 500;
-    margin: 25px 0 10px;
-}
-.login-register p a{
-    color: #162938;
-    text-decoration: none;
-    font-weight: 60;
-}
-.login-register p a:hover{
-    text-decoration: underline;
-}
-.wrapper.active{
-    height:520px;
-}
-
 .image{
     height: auto;
     width: 100px;
 }
-
-
 #container{
-    color:black;
+    color:#fff;
     padding: 1000;
     margin: 100px;
     border:50px;
@@ -226,39 +107,109 @@
     margin: 5px;
     border: 10px;
 }
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  /* Add a hover effect if you want */
-  .fa:hover {
-    opacity: 0.7;
-  }
-  
-  /* Set a specific color for each brand */
-  
-  /* Facebook */
-  .fa-Istagram {
-    background: #3B5998;
-    color: white;
-  }
-  
 .row {
-    display: flex;
+ display: flex;
   }
   
   .column {
     flex: 500%;
     padding: 50px;
   }
+.content{
+  width:100%;
+  position:absolute;
+  top:50%;
+  transform:traslateY(-50%);
+  text-align:center;
+  color:#fff;
+  }
+  .content h1{
+  font-size:70px;
+  margin-top:80px;
+  }
+  .content p{
+  margin:20px auto;
+  font-weight:100;
+  line-height:25px;
+  }
+  button{
+  width:200px;
+  padding:15px 0;
+  text-align:center;
+  margin:20px 10px;
+  border-radius:25px;
+  font-weight:bold;
+  border:2px solid  darkgoldenrod;
+  background:transparent;
+  color:#fff;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+  
+  }
+  span{
+  background:darkgoldenrod;
+  height:100%;
+  width:0;
+  border-radius:25px;
+  position:absolute;
+  left:0;
+  bottom:0;
+  z-index:-1;
+  transition:0.5s;
+  }
+  button:hover span{
+  width:100%;
+  }
+  button:hover{
+  border:none;
+  }
+  
   .copy{
     padding: 50px;
     margin:5px;
     border:10px;
-    background-color:darkred;
+    background-color:darkgoldenrod;
     text-align: center;
+    color: #fff;
+    
+  }
+  .copy b a{
+    margin-bottom: auto;
+    bottom:-10;
+    padding: 10px;
+    border: 10px;
+    color:#fff;
+  }
+  .bgd{
+    background-color: darkgoldenrod;
+    background-size: cover;
+    height: 120vh;
+    /*background: transparent;*/
+  }
+  #navbar a{
+    width: 85%;
+    height: auto;
+    margin: 5px;
+    padding: 50px;
+    border: 50px;
+    align-items: center;
+    text-align: center;
+    color:#000;
+    position:relative;
+    font-size: 25px;
+  }
+  .navigates{
+    font-size: 30px;
+    color:#000;
+    font-weight: 100%;
+    text-align: center;
+    margin-left: 80px;
+    padding: 50px;
+    border: 50px;
+  }
+  .navigates h1{
+    padding: 20px;
+    border: 5px;
+    margin: 10px;
   }
